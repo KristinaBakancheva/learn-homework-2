@@ -12,13 +12,14 @@
 """
 
 def main():
+    text = ""
     with open("referat.txt", "r", encoding = "utf-8") as r:
         text = r.read()
-        words = text.count(" ")
-        print(f"Файл содержит - {len(text)} символов, {words} - слов ")
-        t2 = text.replace(".", "!")
-        with open("referat2.txt", "w", encoding = "utf-8") as r2:
-            r2.write(t2)
+    words = len(text.split())
+    t2 = text.replace(".", "!")
+    with open("referat2.txt", "w", encoding = "utf-8") as r2:
+        r2.write(t2)
+    print(f"Файл содержит - {len(text)} символов, {words} - слов ")
              
 
 if __name__ == "__main__":
